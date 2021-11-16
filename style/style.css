@@ -1,62 +1,93 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;500;700&display=swap");
 
-* {
+*::after,
+*::before {
   padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  box-sizing: border-box;
   margin: 0;
 }
 
-body {
-  font-size: 100%;
-}
-
-.container {
-  max-width: 1232px;
+.nav {
   margin: 0 auto;
-  align-items: stretch;
-  display: grid;
-  grid-template-columns: 400px 400px 400px;
-  grid-template-rows: 80px auto auto 80px;
-  grid-template-areas:
-    "header header header"
-    "promo-block promo-block promo-block"
-    "catalog-card catalog-card catalog-card"
-    "catalog-card catalog-card ."
-    "footer footer footer";
 }
 
 /*///////////////////////// Header //////////////////////// */
-
-header {
-  grid-column: 1/4;
-  grid-row: 1/2;
+.logo h3 {
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 4.6rem;
+  margin: 3rem 0px 2.6rem 104px;
 }
-
+.nav-title {
+  font-family: Roboto;
+  text-decoration: none;
+  color: #1a1b22;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.4;
+}
+.nav-menu {
+  display: flex;
+  margin: 0;
+}
+.menu-icon {
+  display: none;
+}
 /*////////////////////////// Menu //////////////////////////////*/
 
-.navigation {
+.header {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #c4c4c4;
   align-items: center;
-  /* word-wrap: normal;
-  min-height: 8rem; */
-  grid-template-columns: 1fr auto;
-  display: grid;
-  border-bottom: 1px solid #c4c4c4;
-  padding: 30px 0px 26px;
 }
 
-.logo {
-  font-size: 18px;
+.promo {
+  max-width: 123.2rem;
+  margin: 0 auto;
 }
-
-.menu-burger {
-  display: none;
-}
-
-.nav-menu {
+.sec-main {
   display: flex;
+  background-color: #f5f6f7;
+  margin: 0;
+  margin-top: 5.6rem;
+  padding: 6.2rem 0;
 }
+.main {
+  display: flex;
+  flex-direction: row;
+  max-width: 123.2rem;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.card {
+  width: 400px;
+  height: 576px;
+  border-radius: 16px;
+  position: relative;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 1);
+  margin-bottom: 1.6rem;
+}
+.card-2,
+.card-5 {
+  margin: 0 1.6rem;
+}
+
+/* not mine */
 
 .nav-list {
   display: flex;
@@ -74,6 +105,15 @@ header {
   margin-right: 34px;
   list-style-type: none;
   font-size: 18px;
+  padding-top: 1.9rem;
+  padding-bottom: 1.3rem;
+}
+.nav-title:hover,
+.nav-title:active {
+  border-bottom: 1px solid #1a1b22;
+}
+.nav-title:last-of-type {
+  margin-right: -76px;
 }
 
 .btn {
@@ -85,6 +125,7 @@ header {
   border-radius: 100px;
   padding: 12px 37px 12px 19px;
   font-size: 18px;
+  cursor: pointer;
 }
 
 .btn-entry {
@@ -92,6 +133,7 @@ header {
   align-items: center;
   justify-content: center;
   padding: 12px 0px 12px 19px;
+  margin: 1.9rem 10.4rem 1.3rem;
 }
 
 .btn-entry p {
@@ -104,18 +146,13 @@ header {
 
 /*///////////////////////// Promo ///////////////////////////*/
 
-.promo {
-  grid-column: auto;
-  grid-row: auto;
-  padding: 40px 0px 56px;
-}
-
-.promo-title h1{
+.promo-title h1 {
   width: 530px;
 }
 
-.keywords{
+.keywords {
   width: 712px;
+  margin: 0;
 }
 
 .promo-text {
@@ -125,18 +162,18 @@ header {
   font-size: 1.125em;
   line-height: 1.5em;
   color: rgba(26, 27, 34, 0.5);
-  margin-bottom: 28px;
+  margin-top: 4rem;
+  margin-bottom: 2.8rem;
 }
 
 .promo-title h1 {
-  grid-column: 1/2;
   font-family: Roboto Slab;
   font-style: normal;
   font-weight: normal;
   font-size: 2.5em;
   line-height: 46px;
   color: #1a1b22;
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
 }
 
 .promo-title p {
@@ -150,31 +187,7 @@ header {
 
 /*///////////////////////// Cards ///////////////////////////////*/
 
-.catalog-card {
-  grid-column: 1/-1;
-  grid-row: auto;
-  padding: 62px 0px 62px;
-  background: #f5f6f7;
-  background-size: cover;
-}
-
-.catalog {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 16px;
-}
-
 /*///////////////////////// Image & Buttons Cards ///////////////////////*/
-
-.card {
-  max-width: 400px;
-  height: 576px;
-  border-radius: 16px;
-  position: relative;
-  padding: 0;
-  border: 1px solid black;
-}
 
 .picture img {
   max-width: 100%;
@@ -194,15 +207,14 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
-  width: 88px;
+  padding: 8px 12px;
   background: #ffffff;
   border-radius: 10px;
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
   font-size: 0.875em;
-  line-height: 1.5em;
+  line-height: 2.4rem;
   text-align: center;
   color: #000000;
 }
@@ -240,6 +252,10 @@ header {
   border-radius: 10px;
   height: 40px;
   width: 40px;
+  cursor: pointer;
+}
+.trash:active,
+.trash:visited {
 }
 
 .card-date {
@@ -269,6 +285,9 @@ header {
   line-height: 30px;
   color: #1a1b22;
 }
+.h2-mobile {
+  display: none;
+}
 .text-info {
   font-family: Roboto;
   font-style: normal;
@@ -276,6 +295,9 @@ header {
   font-size: 1em;
   line-height: 1.375em;
   color: #1a1b22;
+}
+.mob {
+  display: none;
 }
 
 .tag {
@@ -288,159 +310,224 @@ header {
   text-transform: uppercase;
   color: #b6bcbf;
   position: absolute;
+  margin: 0;
   bottom: 24px;
   left: 24px;
 }
 
 /*//////////////////////////// Footer ////////////////////////////*/
 
-footer {
-  grid-column: 1/4;
-  grid-row: auto;
-}
-
-.footer-navigation {
-  grid-template-columns: 1fr auto;
-  display: grid;
-  border-bottom: 1px solid #c4c4c4;
-  padding: 30px 0px 26px;
-}
-
 .copyright {
-  grid-column: 1/2;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 1em;
+  font-size: 1.6rem;
   line-height: 1.375em;
   color: #b6bcbf;
+  margin: 0;
+  margin-top: 3.2rem;
+  margin-bottom: 2.6rem;
 }
-
-.footer-nav-list {
-  display: inline-block;
+.copyright p {
+  margin: 0;
 }
-
 .social-web {
   display: inline;
 }
-/*//////////////////////////// @media //////////////////////////////*/
 
-@media (max-width: 1230px) {
-  .catalog {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 16px;
-  }
+/**footer**/
+.footer {
+  max-width: 123.2rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
-
-@media (max-width: 770px) {
-  .card {
-    max-width: none;
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: stretch;
-  }
-
-  .text h2 {
-    font-size: 1.375em;
-    line-height: 1.5em;
-  }
-
-  .text-info {
-    width: 192px;
-    height: 88px;
-    font-size: 1em;
-    line-height: 1.375em;
+.footer-nav-list {
+  display: flex;
+  justify-content: space-around;
+}
+.footer-menu {
+  display: flex;
+  align-items: center;
+}
+.footer-menu li {
+  margin-left: 2.7rem;
+}
+.footer-menu:last-of-type {
+  margin-right: 2.7rem;
+}
+.footer-menu a {
+  font-family: Roboto;
+  text-decoration: none;
+  color: #1a1b22;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+.icon {
+  font-family: Roboto;
+  text-decoration: none;
+  color: #1a1b22;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.8rem;
+  margin-right: 2.4rem;
+}
+@media (max-width: 32rem) {
+  .sec-main {
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
     overflow: hidden;
+    margin-top: 3.2rem;
+    margin-bottom: 0;
+    padding-top: 1.6rem;
+    padding-bottom: 2.4rem;
   }
-
-  .promo-title h1 {
-    font-size: 1.875em;
-    line-height: 34px;
-  }
-
-  .container {
-    max-width: 688px;
-    grid-template-columns: 224px 224px 224px;
-    grid-template-rows: 66px auto auto 66px;
-  }
-
-  .key-word {
-    width: 88px;
-    height: 40px;
-    font-size: 0.875em;
-    line-height: 1.5em;
-  }
-
-  .delete-card {
-    display: none;
-  }
-}
-
-@media (max-width: 340px) {
-  .container {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "header"
-      "promo-block"
-      "card"
-      "footer";
-
-    max-width: 320px;
-    grid-template-columns: 288px;
-    grid-template-rows: 66px auto auto 66px;
-    padding: 0px 16px;
-    display: grid;
-  }
-  .menu-burger {
-    display: block;
+  .logo h3 {
+    margin: 1.6rem;
+    line-height: 3.4rem;
   }
   .nav-menu {
     display: none;
   }
-  .catalog {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "card";
-    gap: 10px;
+
+  .card {
+    width: 288px;
+    height: 440px;
+    border-radius: 16px;
+    position: relative;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 1);
+    margin: 1.6rem 1.6rem 0 1.6rem;
   }
-  .catalog-card {
-    padding: 24px 16px;
+  .card-2,
+  .card-5 {
+    margin-bottom: 0 1rem;
+  }
+  .promo-title h1 {
+    margin: 1.6rem 0;
+    font-size: 3rem;
+    width: 28.8rem;
+    height: 10.2rem;
+    padding: 0;
+    line-height: 3.4rem;
+  }
+  .promo-title p:first-of-type {
+    width: 28.8rem;
+    font-size: 1.2rem;
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+
+  .keywords {
+    font-size: 1.8rem;
+    width: 28.8rem;
+  }
+
+  .promo {
+    max-width: 32rem;
+    margin: 0 auto;
+    margin-left: 1.6rem;
+  }
+  .menu-icon {
+    display: flex;
+    margin-right: 1.6rem;
+  }
+  /*footer*/
+  .footer {
+    max-width: 320rem;
+    flex-direction: column-reverse;
+    padding: 0;
+    margin: 1.6rem;
+    margin-top: 0;
+    font-size: 1.8rem;
+  }
+  .footer-nav-list {
+    width: 20rem;
+    height: 7.2rem;
+  }
+  .icon {
+    margin-top: 0;
+    margin-bottom: 2.2rem;
+    margin-left: 1rem;
+  }
+  .icon:last-of-type {
+    margin-right: 0;
+  }
+  .copyright {
+    margin: 2.2rem 0 2.2rem 0;
+    font-size: 1.6rem;
+    line-height: 6px;
+  }
+  .footer-nav-list {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-menu li {
+    margin: 0;
+  }
+
+  .footer-menu {
+    margin-right: 0;
+  }
+  .footer-menu:last-of-type {
+    margin-right: 0;
+  }
+
+  /*elements above image*/
+  .active-btn-flex {
+    left: 16px;
+    top: 16px;
+    right: 16px;
+  }
+
+  .active-btn-flex-inner {
+    display: flex;
+  }
+
+  .delete-card-flag {
+    display: none;
+  }
+  h2 {
+    margin: 1rem 0;
+    height: 5.2rem;
+    size: 2rem;
+    line-height: 2.6rem;
+  }
+  .card-date {
+    margin: 1.6rem 1.6rem 0 0;
+    height: 2.4rem;
+  }
+  .text {
+    margin: 0 1.6rem 8px 1.6rem;
   }
   .card {
-    max-width: none;
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: stretch;
+    overflow: hidden;
+  }
+  h2 {
+    display: none;
+  }
+  .text-info {
+    display: none;
+    line-height: 1.375em;
+    color: #1a1b22;
+  }
+  .mob {
+    display: flex;
+    margin-top: 0;
   }
 
-  .footer-nav-list {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 13px;
-  }
-  .nav-title {
-    margin: 8px;
-  }
-  .footer-nav-menu {
-    display: grid;
-    align-items: flex-start;
-    flex-grow: 1;
-    grid-template-columns: auto 72px;
-    grid-template-rows: 72px auto;
-    grid-column: 1/4;
-    grid-row: 1/2;
+  .tag {
+    bottom: 16px;
+    left: 16px;
   }
 
-  .footer-navigation {
-    grid-template-columns: 1fr auto;
-    display: grid;
-  }
-
-  .copyright {
-    display: grid;
-    grid-column: 1/4;
-    grid-row: 3/4;
+  .h2-mobile {
+    display: flex;
+    margin-bottom: 0;
   }
 }
+/*//////////////////////////// @media //////////////////////////////*/
