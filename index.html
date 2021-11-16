@@ -8,37 +8,36 @@
     <title>NewsExplorer</title>
   </head>
   <body>
-    <div class="container"> 
-      <header>
-          <div class="navigation">
-            <div class="logo">
-              <h3>NewsExplorer</h3>
-            </div>
-            <img class="menu-burger" src="img/menu.svg" alt="">
-            <div class="nav-menu">
-              <ul class="nav-list">
-                <li class="nav-title">Главная</li>
-                <li class="nav-title">Сохранённые статьи</li>
-              </ul>
-              <button class="btn btn-entry">Грета
-                <img src="img/logout.svg" alt="Войти" />
-              </button>
-            </div>
+    <nav class="nav">
+      <header class="header">
+        <div class="logo">
+          <h3>NewsExplorer</h3>
         </div>
-    </header>
-    <section class="promo"> 
-          <div class="promo-title">
-            <p class="promo-text">Сохранённые статьи</p>
-            <h1>Грета, у вас 5 сохранённых статей</h1>
-            <p class="keywords">
-              По ключевым словам:<strong> Природа, Тайга</strong> и
-              <strong>2-м другим</strong>
-            </p>
-          </div> 
-    </section>
-    <section class="catalog-card">
-        <div class="catalog">
-          <div class="card">
+        <div class="nav-menu">
+          <a href="#" class="nav-title">Главная</a>
+          <a href="#" class="nav-title">Сохранённые статьи</a>
+          <button class="btn btn-entry">
+            Грета
+            <img src="img/logout.svg" alt="Войти" />
+          </button>
+        </div>
+        <a href="#" class="menu-icon"><img src="img/menu.svg" alt="menu"></a>
+      </header>
+    </nav>
+      <section class="promo">
+        <div class="promo-title">
+          <p class="promo-text">Сохранённые статьи</p>
+          <h1>Грета, у вас 5 сохранённых статей</h1>
+          <p class="keywords">
+            По ключевым словам:<strong> Природа, Тайга</strong> и
+            <strong>2-м другим</strong>
+          </p>
+        </div>
+      </section>
+  
+      <section class="sec-main">
+        <main class="main">
+          <div class="card card-1">
             <div class="picture">
               <img src="img/image-card-1.jpg" alt="" />
               <div class="active-btn-flex">
@@ -54,15 +53,20 @@
             <div class="text">
               <p class="card-date">2 августа, 2019</p>
               <h2>Национальное достояние – парки</h2>
+              <h2 class="h2-mobile">Национальное достояние – парки</h2>
               <p class="text-info">
                 В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
                 начала складываться система национальных парков – охраняемых
                 территорий, где и сегодня каждый может приобщиться к природе.
               </p>
-              <p class="tag">Дзен</p>
+              <p class="text-info mob">
+                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
+                начала складываться...
+              </p>
+              <p class="tag">Лента.ру</p>
             </div>
           </div>
-          <div class="card">
+          <div class="card card-2">
             <div class="picture">
               <img src="img/image-card-2.jpg" alt="" />
               <div class="active-btn-flex">
@@ -80,15 +84,20 @@
             <div class="text">
               <p class="card-date">2 августа, 2019</p>
               <h2>Лесные огоньки: история одной фотографии</h2>
+              <h2 class="h2-mobile">Лесные огоньки: фотографии</h2>
               <p class="text-info">
-                Фотограф отвлеклась от освещения суровой политической реальности
-                Мексики, чтобы запечатлеть ускользающую красоту одного из
-                местных чудес природы.
+                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
+                начала складываться система национальных парков – охраняемых
+                территорий, где и сегодня каждый может приобщиться к природе.
               </p>
-              <p class="tag">Афиша</p>
+              <p class="text-info mob">
+                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
+                начала складываться ...
+              </p>
+              <p class="tag">Медуза</p>
             </div>
           </div>
-          <div class="card">
+          <div class="card card-3">
             <div class="picture">
               <img src="img/image-card-3.jpg" alt="" />
               <div class="active-btn-flex">
@@ -104,15 +113,19 @@
             <div class="text">
               <p class="card-date">2 августа, 2019</p>
               <h2>«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
+              <h2 class="h2-mobile">«Первозданная тайга»</h2>
               <p class="text-info">
                 Знаменитый фотограф снимает первозданные леса России, чтобы
                 рассказать о необходимости их сохранения. В этот раз он
-                отправился в Двинско-Пинежскую тайгу, где...
+                отправился в Двинско-Пинежскую тайгу.
               </p>
-              <p class="tag">Медиазона</p>
+              <p class="text-info mob">
+                Знаменитый фотограф снимает первозданные леса России...
+              </p>
+              <p class="tag">Медуза</p>
             </div>
           </div>
-          <div class="card">
+          <div class="card card-4">
             <div class="picture">
               <img src="img/image-card-1.jpg" alt="" />
               <div class="active-btn-flex">
@@ -128,15 +141,20 @@
             <div class="text">
               <p class="card-date">2 августа, 2019</p>
               <h2>Национальное достояние – парки</h2>
+              <h2 class="h2-mobile">Национальное достояние – парки</h2>
               <p class="text-info">
                 В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
                 начала складываться система национальных парков – охраняемых
                 территорий, где и сегодня каждый может приобщиться к природе.
               </p>
+              <p class="text-info mob">
+                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
+                начала складываться ...
+              </p>
               <p class="tag">Дзен</p>
             </div>
           </div>
-          <div class="card">
+          <div class="card card-5">
             <div class="picture">
               <img src="img/image-card-2.jpg" alt="" />
               <div class="active-btn-flex">
@@ -152,33 +170,34 @@
             <div class="text">
               <p class="card-date">2 августа, 2019</p>
               <h2>Лесные огоньки: история одной фотографии</h2>
+              <h2 class="h2-mobile">Лесные огоньки: фотографии </h2>
               <p class="text-info">
                 Фотограф отвлеклась от освещения суровой политической реальности
                 Мексики, чтобы запечатлеть ускользающую красоту одного из
                 местных чудес природы.
               </p>
+              <p class="text-info mob">
+                Фотограф отвлеклась от освещения суровой политической реальности...
+              </p>
               <p class="tag">Афиша</p>
             </div>
           </div>
+        </main>
+      </section>
+      <footer class="footer">
+        <div class="copyright">
+          <p>© 2020 Supersite, Powered by News API</p>
         </div>
-    </section>
-    <footer>
-          <div class="footer-navigation">
-            <div class="copyright">
-              <p>© 2020 Supersite, Powered by News API</p>
-            </div>
-            <div class="footer-nav-menu">
-              <ul class="footer-nav-list">
-                <li class="nav-title">Главная</li>
-                <li class="nav-title">Яндекс.Практикум</li>
-              </ul>
-              <div class="social-web">
-                <img src="img/github.svg" alt="GitHub" />
-                <img src="img/fb.svg" alt="Facebook" />
-              </div>
-            </div>
-        </div>  
-    </footer>
-  </div>
+        <div class="footer-menu">
+          <ul class="footer-nav-list">
+            <li class="footer-menu"><a href="#"> Главная</li></a>
+            <li class="footer-menu"><a href="#">Яндекс.Практикум</li></a>
+          </ul>
+          <a class="icon git" href="#"><img src="img/github.svg" alt="GitHub" /></a>
+            <a class="icon facebook" href="#"><img src="img/fb.svg" alt="Facebook" /></a>
+          </div>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
